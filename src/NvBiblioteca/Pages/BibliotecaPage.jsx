@@ -1,9 +1,10 @@
-
+import BibliotecaVirtual from "./BibliotecaVirtual";
+import "./BibliotecaVirtual.css"
 
 export const BibliotecaPage =()=>{
     return(
         <div>
-            <h1>BibliotecaPage</h1>
+            <BibliotecaVirtual />
         </div>
     )
 }
