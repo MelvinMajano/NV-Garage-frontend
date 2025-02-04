@@ -1,10 +1,9 @@
+import GitNv from "./GitNv";
 
-
-
-export const GitPage = () => {
-    return (
+export const GitPage =()=>{
+    return(
         <div>
-            <h1>GitPage</h1>
+            <GitNv/>
         </div>
     )
 }
