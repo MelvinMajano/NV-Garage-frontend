@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./HomePage.css";
 import { 
   FaGraduationCap, 
@@ -19,7 +19,7 @@ import {
 } from "react-icons/fa";
 
 // Datos para Valor Diferencial
-const valueProps = [
+export const valueProps = [
   {
     icon: <FaGraduationCap />,
     title: "Cursos Gratuitos",
@@ -38,7 +38,7 @@ const valueProps = [
 ];
 
 // Datos para Programas Estrella actualizados
-const programas = [
+export const programas = [
   {
     title: "Desarrollo Web",
     icons: [<FaDesktop />, <FaGlobe />, <FaLaptop />],
@@ -83,7 +83,7 @@ const HeroSection = () => (
   </section>
 );
 
-const ValuePropsSection = () => (
+const ValuePropsSection = memo(() => (
   <section className="value-props">
     {valueProps.map((prop, index) => (
       <div className="prop-card" key={index}>
@@ -95,7 +95,7 @@ const ValuePropsSection = () => (
       </div>
     ))}
   </section>
-);
+));
 
 const AboutSection = () => (
   <section className="about-section">
@@ -147,8 +147,8 @@ const AboutSection = () => (
 );
 
 const ProgramasSection = () => (
-  <section className="programas" id="programas">
-    <h2>Nuestros Programas Estrella</h2>
+  <section className="programas" id="programas" role="region" aria-labelledby="programas-title">
+    <h2 id="programas-title">Nuestros Programas Estrella</h2>
     <div className="program-grid">
       {programas.map((programa, index) => (
         <div className={`program-card ${programa.cardClass}`} key={index}>
@@ -264,6 +264,7 @@ const FooterSection = () => (
             aria-label="Instagram"
           >
             <img
+              loading="lazy"
               src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
               alt="Instagram"
             />
