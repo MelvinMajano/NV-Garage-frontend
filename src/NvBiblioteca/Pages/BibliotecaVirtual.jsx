@@ -1,25 +1,49 @@
-import { useState } from "react";
-import "./BibliotecaVirtual.css";
+import React, { useState } from 'react';
+import './BibliotecaVirtual.css';
 
-const books = [
-  { id: 1, category: ["nv", "python"], title: "POO con Python", img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736883477/POO_de_bolsillo_fwpocw.png", link: "https://drive.google.com/file/d/12bsMd3Ylrn4IHWK_BVmQWxBl5V3Frig3/view?usp=sharing" },
-  { id: 2, category: ["nv", "python"], title: "PF con Python", img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736883582/Paradigma_Funcional_e7h1ap.png", link: "https://drive.google.com/file/d/1i_ZD9HN3HzjfTZY1OgxApxUnnhJnH2zm/view?usp=sharing" },
-  { id: 3, category: ["nv", "js"], title: "Complejidad con JS", img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736883891/Copia_de_Paradigma_Funcional_gqqbpk.png", link: "https://drive.google.com/file/d/14daskEL9FG2loXwpggeQaz1uU5rUS3l9/view?usp=drive_link" },
-  { id: 4, category: ["html"], title: "Web Html & Css", img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736884654/Copia_de_Paradigma_Funcional_1_ooamv7.png", link: "https://melvinmajano.github.io/MelvinMajano-MelvinMajano-Introducci-n-Html_Css--NV/" },
-];
+const BibliotecaVirtual = () => {
+  const [filter, setFilter] = useState('todos');
 
-const categories = ["all", "nv", "python", "js", "html"];
+  const categories = ['todos', 'nv', 'python', 'js', 'html'];
 
-export default function BibliotecaVirtual() {
-  const [filter, setFilter] = useState("all");
+  const books = [
+    { 
+      id: 1, 
+      category: ["nv", "python"], 
+      title: "POO con Python", 
+      img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736883477/POO_de_bolsillo_fwpocw.png", 
+      link: "https://drive.google.com/file/d/12bsMd3Ylrn4IHWK_BVmQWxBl5V3Frig3/view?usp=sharing" 
+    },
+    { 
+      id: 2, 
+      category: ["nv", "python"], 
+      title: "PF con Python", 
+      img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736883582/Paradigma_Funcional_e7h1ap.png", 
+      link: "https://drive.google.com/file/d/1i_ZD9HN3HzjfTZY1OgxApxUnnhJnH2zm/view?usp=sharing" 
+    },
+    { 
+      id: 3, 
+      category: ["nv", "js"], 
+      title: "Complejidad con JS", 
+      img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736883891/Copia_de_Paradigma_Funcional_gqqbpk.png", 
+      link: "https://drive.google.com/file/d/14daskEL9FG2loXwpggeQaz1uU5rUS3l9/view?usp=drive_link" 
+    },
+    { 
+      id: 4, 
+      category: ["html"], 
+      title: "Web Html & Css", 
+      img: "https://res.cloudinary.com/dcm2dsjov/image/upload/v1736884654/Copia_de_Paradigma_Funcional_1_ooamv7.png", 
+      link: "https://melvinmajano.github.io/MelvinMajano-MelvinMajano-Introducci-n-Html_Css--NV/" 
+    }
+  ];
 
-  const filteredBooks = filter === "all" ? books : books.filter(book => book.category.includes(filter));
+  const filteredBooks = filter === 'todos' 
+    ? books 
+    : books.filter(book => book.category.includes(filter));
 
   return (
-    <div className="container">
-      <header className="header">Biblioteca Virtual NV/</header>
-      <nav className="nav">
-        <a href="#nv-books">Documentos NV/</a>
+    <div className="biblioteca-page">
+      <nav className="biblioteca-nav">
         <a href="#external-books">Libros de Informática</a>
       </nav>
      
@@ -51,4 +75,6 @@ export default function BibliotecaVirtual() {
       <footer className="footer">Derechos reservados a NV/</footer>
     </div>
   );
-}
+};
+
+export default BibliotecaVirtual; 
