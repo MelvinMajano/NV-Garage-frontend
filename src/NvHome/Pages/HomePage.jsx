@@ -18,7 +18,8 @@ import {
   FaTrophy, 
   FaHandshake,
   FaCode,
-  FaArrowRight
+  FaArrowRight,
+  FaSearch
 } from "react-icons/fa";
 
 // Datos para Valor Diferencial
@@ -74,18 +75,52 @@ const HeroSection = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1 className="logo">NV/</h1>
-        <p className="tagline">Comunidad de Innovación Educativa</p>
+        <h1 className="logo">NV/GARAGE</h1>
+        <p className="tagline">Explorando el Futuro del Aprendizaje Tecnológico</p>
+        <div className="search-bar">
+          <FaSearch className="search-icon" />
+          <input type="text" placeholder="Buscar cursos, proyectos o recursos..." />
+        </div>
         <div className="cta-buttons">
           <button onClick={() => navigate('/programas')} className="cta-btn">
-            Explora Cursos
+            Explorar Cursos
           </button>
           <button onClick={() => navigate('/comunidad')} className="cta-btn outline">
-            Únete a la Comunidad
+            Unirse a la Comunidad
           </button>
         </div>
       </div>
-      <div className="hero-scroll-indicator" aria-hidden="true"></div>
+    </section>
+  );
+};
+
+const FeaturedSection = () => {
+  const navigate = useNavigate();
+  
+  return (
+    <section className="featured-section">
+      <div className="featured-content">
+        <div className="featured-image">
+          <iframe 
+            className="featured-video"
+            src="https://www.youtube.com/embed/etkFBtktg2k"
+            title="Curso de JavaScript - Introducción"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <div className="featured-overlay">
+            <span>Curso Destacado</span>
+          </div>
+        </div>
+        <div className="featured-text">
+          <h2>Curso Completo de JavaScript</h2>
+          <p>Aprende JavaScript desde cero con nuestro curso completo. Domina los fundamentos, la programación orientada a objetos, y las últimas características de ES6+. Un viaje práctico por el lenguaje más versátil de la web.</p>
+          <button onClick={() => window.open('https://youtu.be/etkFBtktg2k?si=xRDNxJqVxK_k_OS-', '_blank')} className="featured-cta">
+            Comenzar el Curso
+          </button>
+        </div>
+      </div>
     </section>
   );
 };
@@ -424,10 +459,12 @@ const HomePage = () => {
         <HeroSection />
       </header>
       <main>
+        <FeaturedSection />
         <ValuePropsSection />
         <AboutSection />
         <ProgramasSection />
-        <ComunidadSection />
+        <BlogSection />
+        <ProyectosSection />
       </main>
       <FooterSection />
     </div>
