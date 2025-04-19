@@ -1,0 +1,105 @@
+.detailContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2.3rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.descriptionSection {
+  margin-bottom: 1.2rem;
+}
+
+.descriptionTitle {
+  font-size: 1.2rem;
+  color: #334155;
+  margin-bottom: 0.3rem;
+}
+
+.descriptionText {
+  font-size: 1.08rem;
+  color: #22223b;
+}
+
+.availabilitySection {
+  margin-bottom: 1.2rem;
+}
+
+.availabilityTitle {
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.availabilityText {
+  font-weight: bold;
+}
+
+.technicalSheet {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+
+.gallerySection {
+  margin-bottom: 1.2rem;
+}
+
+.galleryTitle {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.galleryImages {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.galleryImage {
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.footer {
+  margin-top: 2rem;
+}
+
+.backButton {
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.backButton:hover {
+  background: linear-gradient(90deg, #0ea5e9 0%, #2563eb 100%);
+}

@@ -1,26 +1,16 @@
 import React from 'react';
-import { FaSearch, FaCalculator, FaAtom, FaFlask, FaWhatsapp } from 'react-icons/fa';
+import { FaAtom, FaFlask, FaWhatsapp } from 'react-icons/fa';
 import './NVLearnPage.css';
 
 const NVLearnPage = () => {
   const courses = [
-    {
-      id: 1,
-      title: "Ecuaciones Diferenciales",
-      description: "Tutorías personalizadas para ecuaciones diferenciales ordinarias y parciales. Incluye ejercicios prácticos y resolución de problemas.",
-      category: "Matemáticas",
-      level: "Intermedio",
-      icon: <FaCalculator />,
-      whatsappLink: "https://chat.whatsapp.com/K4r167z7SREIXjMXgqS4fL"
-    },
     {
       id: 2,
       title: "Física 100",
       description: "Tutorías para Física General I. Cubre mecánica, cinemática, dinámica y principios de conservación.",
       category: "Física",
       level: "Principiante",
-      icon: <FaAtom />,
-      whatsappLink: "https://chat.whatsapp.com/JHr9KAqSB0x8Ke6CwQnudI"
+      icon: <FaAtom />
     },
     {
       id: 3,
@@ -28,21 +18,17 @@ const NVLearnPage = () => {
       description: "Tutorías para Física General II. Enfocado en electromagnetismo, ondas y física moderna.",
       category: "Física",
       level: "Intermedio",
-      icon: <FaFlask />,
-      whatsappLink: "https://chat.whatsapp.com/E0F1pHTcwKf4kYo5CtcmxB"
+      icon: <FaFlask />
+    },
+    {
+      id: 4,
+      title: "Física Médica",
+      description: "Tutorías de apoyo en física médica: conceptos de radiación, imagenología, física de la salud y aplicaciones clínicas.",
+      category: "Física",
+      level: "Avanzado",
+      icon: <FaFlask />
     }
   ];
-
-  const categories = ["Matemáticas", "Física"];
-  const levels = ["Todos", "Principiante", "Intermedio"];
-  const [selectedCategory, setSelectedCategory] = React.useState('Todos');
-  const [selectedLevel, setSelectedLevel] = React.useState('Todos');
-
-  const filteredCourses = courses.filter(course => {
-    const categoryMatch = selectedCategory === 'Todos' || course.category === selectedCategory;
-    const levelMatch = selectedLevel === 'Todos' || course.level === selectedLevel;
-    return categoryMatch && levelMatch;
-  });
 
   return (
     <div className="nvlearn-page">
@@ -50,36 +36,12 @@ const NVLearnPage = () => {
         <h1>Programas de Tutoría NV Learn</h1>
         <p>Programas personalizados de tutoría para materias universitarias</p>
       </div>
-
-      <div className="search-filters">
-        <div className="search-box">
-          <FaSearch className="search-icon" />
-          <input type="text" placeholder="Buscar programas..." />
-        </div>
-        <div className="filter-buttons">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-          {levels.map((level) => (
-            <button
-              key={level}
-              className={`filter-btn ${selectedLevel === level ? 'active' : ''}`}
-              onClick={() => setSelectedLevel(level)}
-            >
-              {level}
-            </button>
-          ))}
-        </div>
+      <div className="nvlearn-description" style={{maxWidth: '600px', margin: '0 auto 24px auto', fontSize: '1.08em', color: '#e0e0e0', textAlign: 'center'}}>
+        Estos programas tienen la finalidad de reforzar y apoyar a los alumnos en los conocimientos de clases de física en general, proporcionando acompañamiento, resolución de dudas y ejercicios prácticos.
       </div>
 
       <div className="courses-grid">
-        {filteredCourses.map((course) => (
+        {courses.map((course) => (
           <div key={course.id} className="course-card">
             <div className="course-icon">{course.icon}</div>
             <div className="course-content">
@@ -90,7 +52,7 @@ const NVLearnPage = () => {
                 <span className="course-level">{course.level}</span>
               </div>
               <a 
-                href={course.whatsappLink} 
+                href="https://chat.whatsapp.com/Hxob8TLubdI9NTIAaYxWB7" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="course-cta"
@@ -106,4 +68,4 @@ const NVLearnPage = () => {
   );
 };
 
-export default NVLearnPage; 
+export default NVLearnPage;

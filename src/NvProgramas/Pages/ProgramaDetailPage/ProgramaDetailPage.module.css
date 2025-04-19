@@ -1,0 +1,118 @@
+.detailContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f172a 60%, #3b1c5c 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 20px rgba(24, 0, 48, 0.18);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  color: #e0e7ef;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2.3rem;
+  color: #a5b4fc;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #1e293b99;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+  box-shadow: 0 1px 8px #0002;
+}
+
+.descriptionSection {
+  margin-bottom: 1.2rem;
+}
+
+.descriptionTitle {
+  font-size: 1.2rem;
+  color: #a5b4fc;
+  margin-bottom: 0.3rem;
+}
+
+.descriptionText {
+  font-size: 1.08rem;
+  color: #e0e7ef;
+}
+
+.availabilitySection {
+  margin-bottom: 1.2rem;
+}
+
+.availabilityTitle {
+  font-size: 1.1rem;
+  color: #c084fc;
+}
+
+.availabilityText {
+  font-weight: bold;
+  text-shadow: 0 1px 4px #0006;
+}
+
+.technicalSheet {
+  color: #38bdf8;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  transition: color 0.2s;
+}
+.technicalSheet:hover {
+  color: #a5b4fc;
+}
+
+.gallerySection {
+  margin-bottom: 1.2rem;
+}
+
+.galleryTitle {
+  font-size: 1.1rem;
+  color: #a5b4fc;
+  margin-bottom: 0.5rem;
+}
+
+.galleryImages {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.galleryImage {
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px #0005;
+  background: #18181b;
+  border: 2px solid #6366f1;
+}
+
+.footer {
+  margin-top: 2rem;
+}
+
+.backButton {
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0004;
+}
+.backButton:hover {
+  background: linear-gradient(90deg, #a21caf 0%, #6366f1 100%);
+  color: #fff;
+}
